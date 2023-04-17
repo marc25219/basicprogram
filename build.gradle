@@ -10,8 +10,14 @@ repositories {
     mavenCentral()
 }
 
+
+
 application {
     mainClassName = "org.program.Main"
+}
+
+run {
+    standardInput = System.in
 }
 
 dependencies {
