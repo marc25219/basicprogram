@@ -1,17 +1,28 @@
 package org.program;
 
-import org.person.Person;
-import org.person.RandomData;
+import arithmetics.Addition;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        RandomData random = new RandomData();
+        int option;
 
-        Person person = new Person("77408564-E", "Pepe", "Garcia", 656565655, 35);
-        Person person1 = new Person(random.randomDNI(), "Pepe", "Garcia", 656565655, 35);
+        Scanner scanner = new Scanner(System.in);
+        Menu menu = new Menu();
+        menu.showBoard();
 
-        System.out.println("Esta persona tiene Edad:" + person.getAge());
-        System.out.println("Esta persona tiene Edad:" + person1.getDNI());
+        option = scanner.nextInt();
+
+        if (option == 1) {
+
+            System.out.println("Introduce your first parameter (1/2): ");
+            double x = scanner.nextInt();
+            System.out.println("Introduce your second parameter (2/2): ");
+            double y = scanner.nextInt();
+
+            Addition addition = new Addition(x, y);
+            addition.showResult();
+        }
     }
 }
