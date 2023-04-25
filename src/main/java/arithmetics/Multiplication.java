@@ -1,11 +1,11 @@
 package arithmetics;
 
-public class Addition {
+public class Multiplication {
 
     double x;
     double y;
 
-    public Addition (double x, double y) {
+    public Multiplication(double x, double y) {
         setX(x);
         setY(y);
     }
@@ -32,6 +32,6 @@ public class Addition {
     }
 
     private double calculate (double x, double y) {
-        return (x+y);
+        return (x*y);
     }
 }
